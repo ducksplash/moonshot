@@ -319,7 +319,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4425428723088313499}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 340f99b8334a14c4a8a01dce6e1e5348, type: 3}
+  m_Avatar: {fileID: 9000000, guid: 6897d1f986bf2c4a09fb7a2eef08d37b, type: 3}
   m_Controller: {fileID: 9100000, guid: cbd1db45c75e5b948a5befe9ecb80421, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
@@ -341,7 +341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73fbf3aa05f6be24780438449f505aa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useRootMotion: 0
+  useRootMotion: 1
   rotateByWorld: 0
   useContinuousSprint: 1
   sprintOnlyFree: 1
@@ -352,9 +352,9 @@ MonoBehaviour:
     rotationSpeed: 16
     walkByDefault: 0
     rotateWithCamera: 0
-    walkSpeed: 2
-    runningSpeed: 4
-    sprintSpeed: 6
+    walkSpeed: 4
+    runningSpeed: 8
+    sprintSpeed: 12
   strafeSpeed:
     movementSmooth: 6
     animationSmooth: 0.2
@@ -364,7 +364,7 @@ MonoBehaviour:
     walkSpeed: 2
     runningSpeed: 4
     sprintSpeed: 6
-  jumpWithRigidbodyForce: 0
+  jumpWithRigidbodyForce: 1
   jumpAndRotate: 1
   jumpTimer: 0.3
   jumpHeight: 4
