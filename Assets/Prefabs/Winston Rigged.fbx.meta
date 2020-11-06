@@ -9,7 +9,12 @@ ModelImporter:
   - first:
       74: -5003131165045108139
     second: metarig|PoseLib
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Startercharacter1Mtl
+    second: {fileID: 2100000, guid: a078461e8a0d729bda92ce8ef56fd968, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -60,15 +65,15 @@ ModelImporter:
     maxBonesPerVertex: 12
     minBoneWeight: 0.001
     meshOptimizationFlags: -1
-    indexFormat: 0
+    indexFormat: 2
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
-    normalSmoothAngle: 60
-    normalImportMode: 0
+    normalSmoothAngle: 72
+    normalImportMode: 1
     tangentImportMode: 3
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
