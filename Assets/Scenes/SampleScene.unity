@@ -1039,7 +1039,7 @@ PrefabInstance:
     - target: {fileID: 5866666021909216657, guid: 6897d1f986bf2c4a09fb7a2eef08d37b,
         type: 3}
       propertyPath: m_ApplyRootMotion
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6289287426197645775, guid: 6897d1f986bf2c4a09fb7a2eef08d37b,
         type: 3}
@@ -1136,8 +1136,7 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.9999999
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5866666021909216657, guid: 6897d1f986bf2c4a09fb7a2eef08d37b, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6897d1f986bf2c4a09fb7a2eef08d37b, type: 3}
 --- !u!4 &1390438069 stripped
 Transform:
@@ -1195,6 +1194,7 @@ MonoBehaviour:
   speed: 7.5
   jumpSpeed: 8.5
   gravity: 20
+  walkTime: 0
   playerCameraParent: {fileID: 1567161035}
   lookSpeed: 2.6
   lookXLimit: 60
