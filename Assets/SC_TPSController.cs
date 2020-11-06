@@ -8,6 +8,7 @@ public class SC_TPSController : MonoBehaviour
     public float speed = 7.5f;
     public float jumpSpeed = 8.0f;
     public float gravity = 20.0f;
+	public int walkTime = 0;
     public Transform playerCameraParent;
     public float lookSpeed = 2.0f;
     public float lookXLimit = 60.0f;
@@ -38,6 +39,14 @@ public class SC_TPSController : MonoBehaviour
             float curSpeedY = canMove ? speed * Input.GetAxis("Horizontal") : 0;
             moveDirection = (forward * curSpeedX) + (right * curSpeedY);
 			
+			
+			if (curSpeedX > 0)
+			{
+			WinstonAniCont.SetTrigger("Walking");
+			}
+
+            //Send the message to the Animator to activate the trigger parameter named "Jump"
+
 
             if (Input.GetButton("Jump") && canMove)
             {
@@ -49,10 +58,11 @@ public class SC_TPSController : MonoBehaviour
         // when the moveDirection is multiplied by deltaTime). This is because gravity should be applied
         // as an acceleration (ms^-2)
         moveDirection.y -= gravity * Time.deltaTime;
+		
+
 
         // Move the controller
         characterController.Move(moveDirection * Time.deltaTime);
-
         // Player and Camera rotation
         if (canMove)
         {
@@ -61,7 +71,6 @@ public class SC_TPSController : MonoBehaviour
             rotation.x = Mathf.Clamp(rotation.x, -lookXLimit, lookXLimit);
             playerCameraParent.localRotation = Quaternion.Euler(rotation.x, 0, 0);
             transform.eulerAngles = new Vector2(0, rotation.y);
-			WinstonAniCont.SetTrigger("Walking");
         }
     }
 }

@@ -24,22 +24,24 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
-    optimizeGameObjects: 0
-    motionNodeName: 
+    optimizeGameObjects: 1
+    motionNodeName: WGTS_rig
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    importAnimatedCustomProperties: 0
+    importAnimatedCustomProperties: 1
     importConstraints: 1
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
-    animationWrapMode: 0
-    extraExposedTransformPaths: []
+    animationWrapMode: 4
+    extraExposedTransformPaths:
+    - WGTS_rig
+    - Winston
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
@@ -48,11 +50,11 @@ ModelImporter:
       internalID: 0
       firstFrame: 0
       lastFrame: 28
-      wrapMode: 0
+      wrapMode: 4
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
-      loop: 0
+      loop: 1
       hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
@@ -153,7 +155,7 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: WGTS_rig
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
