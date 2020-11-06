@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
-
 public class SC_TPSController : MonoBehaviour
 {
     public float speed = 7.5f;
@@ -12,7 +11,7 @@ public class SC_TPSController : MonoBehaviour
     public Transform playerCameraParent;
     public float lookSpeed = 2.0f;
     public float lookXLimit = 60.0f;
-
+    Animator WinstonAniCont;
     CharacterController characterController;
     Vector3 moveDirection = Vector3.zero;
     Vector2 rotation = Vector2.zero;
@@ -23,6 +22,8 @@ public class SC_TPSController : MonoBehaviour
     void Start()
     {
         characterController = GetComponent<CharacterController>();
+        //Get Animator component
+        WinstonAniCont = GetComponent<Animator>();
         rotation.y = transform.eulerAngles.y;
     }
 
@@ -36,6 +37,7 @@ public class SC_TPSController : MonoBehaviour
             float curSpeedX = canMove ? speed * Input.GetAxis("Vertical") : 0;
             float curSpeedY = canMove ? speed * Input.GetAxis("Horizontal") : 0;
             moveDirection = (forward * curSpeedX) + (right * curSpeedY);
+			
 
             if (Input.GetButton("Jump") && canMove)
             {
@@ -59,6 +61,7 @@ public class SC_TPSController : MonoBehaviour
             rotation.x = Mathf.Clamp(rotation.x, -lookXLimit, lookXLimit);
             playerCameraParent.localRotation = Quaternion.Euler(rotation.x, 0, 0);
             transform.eulerAngles = new Vector2(0, rotation.y);
+			WinstonAniCont.SetTrigger("Walking");
         }
     }
 }
