@@ -8,11 +8,10 @@ public class SC_TPSController : MonoBehaviour
     public float speed = 7.5f;
     public float jumpSpeed = 8.0f;
     public float gravity = 20.0f;
-	public int walkTime = 0;
     public Transform playerCameraParent;
     public float lookSpeed = 2.0f;
     public float lookXLimit = 60.0f;
-    Animator WinstonAniCont;
+    Animator WiMotion;
     CharacterController characterController;
     Vector3 moveDirection = Vector3.zero;
     Vector2 rotation = Vector2.zero;
@@ -24,7 +23,7 @@ public class SC_TPSController : MonoBehaviour
     {
         characterController = GetComponent<CharacterController>();
         //Get Animator component
-        WinstonAniCont = GetComponent<Animator>();
+        WiMotion = GetComponent<Animator>();
         rotation.y = transform.eulerAngles.y;
     }
 
@@ -38,13 +37,8 @@ public class SC_TPSController : MonoBehaviour
             float curSpeedX = canMove ? speed * Input.GetAxis("Vertical") : 0;
             float curSpeedY = canMove ? speed * Input.GetAxis("Horizontal") : 0;
             moveDirection = (forward * curSpeedX) + (right * curSpeedY);
-			
-			
-			if (curSpeedX > 0)
-			{
-			WinstonAniCont.SetTrigger("Walking");
-			}
-
+	
+	
             //Send the message to the Animator to activate the trigger parameter named "Jump"
 
 
@@ -53,7 +47,21 @@ public class SC_TPSController : MonoBehaviour
                 moveDirection.y = jumpSpeed;
             }
         }
+		
+		if (Input.GetButton("Up") || Input.GetButton("Down") )
+		{
+		WiMotion.SetTrigger("Walking");
+		Debug.Log(WiMotion.GetBool("Walking"));
+		}		
+		else if (Input.GetButtonUp("Up") || Input.GetButtonUp("Down"))
+		{
+		WiMotion.ResetTrigger("Walking");
+		}
 
+		// else
+		// {
+		// WiMotion.ResetTrigger("Walking");			
+		// }
         // Apply gravity. Gravity is multiplied by deltaTime twice (once here, and once below
         // when the moveDirection is multiplied by deltaTime). This is because gravity should be applied
         // as an acceleration (ms^-2)
