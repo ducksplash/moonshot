@@ -55,6 +55,7 @@ public class SC_TPSController : MonoBehaviour
 		}		
 		else if (Input.GetButtonUp("Up") || Input.GetButtonUp("Down"))
 		{
+		WiMotion.SetTrigger("Idle");	
 		WiMotion.ResetTrigger("Walking");
 		}
 
