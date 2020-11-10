@@ -42,22 +42,54 @@ public class SC_TPSController : MonoBehaviour
             //Send the message to the Animator to activate the trigger parameter named "Jump"
 
 
-            if (Input.GetButton("Jump") && canMove)
-            {
-                moveDirection.y = jumpSpeed;
-            }
-        }
+
+
+
+
+		if (Input.GetButton("Left"))
+		{
+		WiMotion.SetTrigger("StrafeLeft");
+				
 		
+		}		
+		else if (Input.GetButtonUp("Left"))
+		{
+		WiMotion.SetTrigger("Idle");	
+		WiMotion.ResetTrigger("StrafeLeft");
+		}
+		
+		if (Input.GetButton("Right"))
+		{
+		WiMotion.SetTrigger("StrafeRight");
+		}		
+		else if (Input.GetButtonUp("Right"))
+		{
+		WiMotion.SetTrigger("Idle");	
+		WiMotion.ResetTrigger("StrafeRight");
+		}		
+
 		if (Input.GetButton("Up") || Input.GetButton("Down") )
 		{
 		WiMotion.SetTrigger("Walking");
-		Debug.Log(WiMotion.GetBool("Walking"));
 		}		
 		else if (Input.GetButtonUp("Up") || Input.GetButtonUp("Down"))
 		{
 		WiMotion.SetTrigger("Idle");	
 		WiMotion.ResetTrigger("Walking");
 		}
+
+
+
+
+
+
+            if (Input.GetButton("Jump") && canMove)
+            {
+                moveDirection.y = jumpSpeed;
+            }
+        }
+		
+
 
 		// else
 		// {
