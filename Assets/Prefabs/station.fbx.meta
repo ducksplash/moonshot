@@ -13,22 +13,22 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Core1Mtl
-    second: {fileID: 2100000, guid: 61dc217abd86e3742bc31ce949319fb6, type: 2}
+    second: {fileID: 2100000, guid: 976b31720675c1a47be763ebf89dc566, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Coreshield1Mtl
-    second: {fileID: 2100000, guid: 06613f11698b1284a9789ae0132c6177, type: 2}
+    second: {fileID: 2100000, guid: 79e14e19b170c8448934c52fe4466eee, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Gantryplatform1Mtl
-    second: {fileID: 2100000, guid: ec7bf04c84d4ac9409d35673432c1f1d, type: 2}
+    second: {fileID: 2100000, guid: 1d8423fa6b3beda48a518356b59634e5, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Gantryringinner1Mtl
-    second: {fileID: 2100000, guid: 88e5efd7a63006f4d9febbb082b478c3, type: 2}
+    second: {fileID: 2100000, guid: 32a76832b79e84347ad9df08b12709c3, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -38,7 +38,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Glasspane2Mtl
-    second: {fileID: 2100000, guid: 73228956981ce5145a947e3bd065d07a, type: 2}
+    second: {fileID: 10651, guid: 0000000000000000f000000000000000, type: 0}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -48,7 +48,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Meshpart4Mtl
-    second: {fileID: 2100000, guid: 49ae1584a2eb94e468de8ba8ebe17efd, type: 2}
+    second: {fileID: 2100000, guid: 1d8423fa6b3beda48a518356b59634e5, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
