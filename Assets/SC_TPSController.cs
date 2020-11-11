@@ -6,8 +6,11 @@ using UnityEngine;
 public class SC_TPSController : MonoBehaviour
 {
     public float speed = 7.5f;
+	public float curSpeedX = 0f;
+	public float curSpeedY = 0f;
     public float jumpSpeed = 8.0f;
     public float gravity = 20.0f;
+	public float sprintBoost = 1.4f;
     public Transform playerCameraParent;
     public float lookSpeed = 2.0f;
     public float lookXLimit = 60.0f;
@@ -31,25 +34,41 @@ public class SC_TPSController : MonoBehaviour
     {
         if (characterController.isGrounded)
         {
+			
+			
+
+			
+			
             // We are grounded, so recalculate move direction based on axes
             Vector3 forward = transform.TransformDirection(Vector3.forward);
             Vector3 right = transform.TransformDirection(Vector3.right);
-            float curSpeedX = canMove ? speed * Input.GetAxis("Vertical") : 0;
-            float curSpeedY = canMove ? speed * Input.GetAxis("Horizontal") : 0;
+            curSpeedX = canMove ? speed * Input.GetAxis("Vertical") : 0;
+            curSpeedY = canMove ? speed * Input.GetAxis("Horizontal") : 0;
+			
+			// Sprint
+			if (Input.GetButton("Sprint"))
+			{
+				curSpeedX = curSpeedX * sprintBoost;
+				curSpeedY = curSpeedY * sprintBoost;
+			}
+			
+			else if (Input.GetButtonUp("Sprint"))
+			{
+				curSpeedX = curSpeedX / sprintBoost; 
+				curSpeedY = curSpeedY / sprintBoost; 
+			}			
+			
+
+			
             moveDirection = (forward * curSpeedX) + (right * curSpeedY);
 	
 	
             //Send the message to the Animator to activate the trigger parameter named "Jump"
 
 
-
-
-
-
 		if (Input.GetButton("Left"))
 		{
 		WiMotion.SetTrigger("StrafeLeft");
-				
 		
 		}		
 		else if (Input.GetButtonUp("Left"))
@@ -71,6 +90,7 @@ public class SC_TPSController : MonoBehaviour
 		if (Input.GetButton("Up") || Input.GetButton("Down") )
 		{
 		WiMotion.SetTrigger("Walking");
+		
 		}		
 		else if (Input.GetButtonUp("Up") || Input.GetButtonUp("Down"))
 		{
