@@ -19,6 +19,8 @@ public class SC_CameraCollision : MonoBehaviour
         directionNormalized = defaultPos.normalized;
         parentTransform = transform.parent;
         defaultDistance = Vector3.Distance(defaultPos, Vector3.zero);
+		
+		
     }
 
     // FixedUpdate for physics calculations
