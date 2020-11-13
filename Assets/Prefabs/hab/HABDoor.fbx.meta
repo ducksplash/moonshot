@@ -7,23 +7,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Front1Mtl.001
-    second: {fileID: 2100000, guid: 6e343216b1d38184ebb4179d70d19339, type: 2}
+      name: Back1Mtl
+    second: {fileID: 2100000, guid: ee5a323425957a845909be7e6549a31a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Part1Mtl.001
-    second: {fileID: 2100000, guid: 742b2955572bb1b4f80ec68078173a30, type: 2}
+      name: Part1Mtl
+    second: {fileID: 2100000, guid: 6117d906c22cc3a4fb3a0ac333b8381b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Union1Mtl.001
-    second: {fileID: 2100000, guid: c905d69ce0d11074f910939310e502c7, type: 2}
+      name: Union1Mtl
+    second: {fileID: 2100000, guid: 06613f11698b1284a9789ae0132c6177, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Window1Mtl.003
-    second: {fileID: 2100000, guid: d73063f4993ebc84181cb228c55a5b93, type: 2}
+      name: Window1Mtl
+    second: {fileID: 2100000, guid: f92cf2c970d283547af5ddb29c7dda98, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -56,7 +56,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1

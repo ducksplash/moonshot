@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c6e2ecc383bf2e64286467b95d037ce7
+guid: 33b36f0eca218b840afdc6ef9e66c8b6
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
@@ -7,18 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: 341Mtl
-    second: {fileID: 2100000, guid: f92cf2c970d283547af5ddb29c7dda98, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 41Mtl
-    second: {fileID: 2100000, guid: f92cf2c970d283547af5ddb29c7dda98, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Unitc1Mtl
-    second: {fileID: 2100000, guid: 057b128f98dc7ef478e1fe32fcfa9453, type: 2}
+      name: ApocalypticFlag01
+    second: {fileID: 2100000, guid: e158257f773620e45b297f97c4bd8bb9, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -62,7 +52,7 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    keepQuads: 1
+    keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
     skinWeightsMode: 0
@@ -77,12 +67,12 @@ ModelImporter:
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 1
+    normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
-    normalSmoothingSource: 1
+    normalSmoothingSource: 0
   referencedClips: []
   importAnimation: 1
   humanDescription:
