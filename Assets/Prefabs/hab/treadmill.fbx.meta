@@ -1,9 +1,30 @@
 fileFormatVersion: 2
-guid: 88af5651c67579d48815fa4cebf5f2ab
+guid: 0efae3201ed1cc54e89400d0c8b5a969
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Part1Mtl.001
+    second: {fileID: 2100000, guid: a31e69ff5d7063342b99168e2e8942ad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Part2Mtl.001
+    second: {fileID: 2100000, guid: 976b31720675c1a47be763ebf89dc566, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Speedup1Mtl.001
+    second: {fileID: 2100000, guid: c7cf9e9698af21e43bd73d8dcb3f4092, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Union1Mtl
+    second: {fileID: -5428748591727103374, guid: cd352a9af65ae0a4792b20dc0d5f4add,
+      type: 3}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -36,7 +57,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1
@@ -62,7 +83,7 @@ ModelImporter:
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 0
+    normalImportMode: 1
     tangentImportMode: 3
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
