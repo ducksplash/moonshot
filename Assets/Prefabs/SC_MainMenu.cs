@@ -8,7 +8,7 @@ public class SC_MainMenu : MonoBehaviour
     public GameObject CreditsMenu;
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         MainMenuButton();
     }
