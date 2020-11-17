@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RV1 : MonoBehaviour
+public class RV : MonoBehaviour
 {
+	
     // Start is called before the first frame update
     void Start()
     {
