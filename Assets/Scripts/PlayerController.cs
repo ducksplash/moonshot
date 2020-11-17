@@ -3,8 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
-public class SC_TPSController : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
+	
+	
+	
+	
+	// Parameters
     public float speed = 7.5f;
 	public float curSpeedX = 0f;
 	public float curSpeedY = 0f;
@@ -16,6 +21,13 @@ public class SC_TPSController : MonoBehaviour
     public float lookXLimit = 60.0f;
     Animator WiMotion;
     CharacterController characterController;
+	
+	// Player Stats
+	
+	public int returnVehicleParts = 0;
+	
+	
+	
     Vector3 moveDirection = Vector3.zero;
     Vector2 rotation = Vector2.zero;
 
