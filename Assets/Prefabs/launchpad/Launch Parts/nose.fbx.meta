@@ -8,12 +8,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Nose1Mtl
-    second: {fileID: 2100000, guid: 8dc06a2d8e07a874687fa465d2d14917, type: 2}
+    second: {fileID: 2100000, guid: 27c4c25d5793c6842ac555af60f112c1, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Payload1Mtl
-    second: {fileID: 2100000, guid: 88339f75b11e697468a3c414aec3f814, type: 2}
+    second: {fileID: 2100000, guid: 27c4c25d5793c6842ac555af60f112c1, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
