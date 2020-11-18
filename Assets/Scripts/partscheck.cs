@@ -19,7 +19,12 @@ public class partscheck : MonoBehaviour
 	
 	public GameObject midsection;	
 	public GameObject midConePart;
-
+	public int collectedParts = 0;
+	public int midConeDone = 0;		
+	public int enginesDone = 0;		
+	public int largeTubeDone = 0;		
+	public int smallTubeDone = 0;		
+	public int noseDone = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,54 +36,55 @@ public class partscheck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		
-		int doneYet = 0;
-        if (!GameObject.Find ("nosePart"))
+
+        if(noseDone < 1)
 		{
-			if (doneYet < 1)
+			if (!GameObject.Find ("nosePart")) 
 			{
 			nose.GetComponent<CanvasGroup>().alpha = 1.0f;
-			doneYet = 1;
+			noseDone = 1;
+			collectedParts++;
 			}
         } 		
-		
-		doneYet = 0;
-        if (!GameObject.Find ("smallTubePart"))
+
+        if (smallTubeDone < 1)
 		{
-			if (doneYet < 1)
+			if (!GameObject.Find ("smallTubePart"))
 			{
 			smalltube.GetComponent<CanvasGroup>().alpha = 1.0f;
-			doneYet = 1;
+			smallTubeDone = 1;
+			collectedParts++;
 			}
         } 
-		
-		doneYet = 0;
-        if (!GameObject.Find ("bigTubePart"))
+
+        if (largeTubeDone < 1)
 		{
-			if (doneYet < 1)
+			if (!GameObject.Find ("bigTubePart"))
 			{
 			largetube.GetComponent<CanvasGroup>().alpha = 1.0f;
-			doneYet = 1;
+			largeTubeDone = 1;
+			collectedParts++;
 			}
         } 
-		
-		doneYet = 0;
-        if (!GameObject.Find ("enginesPart"))
+
+        if (enginesDone < 1)
 		{
-			if (doneYet < 1)
+			if (!GameObject.Find ("enginesPart"))
 			{
 			engines.GetComponent<CanvasGroup>().alpha = 1.0f;
-			doneYet = 1;
+			enginesDone = 1;
+			collectedParts++;
 			}
         } 	
 		
-		doneYet = 0;
-        if (!GameObject.Find ("midConePart"))
+
+        if (midConeDone < 1)
 		{
-			if (doneYet < 1)
+			if (!GameObject.Find ("midConePart"))
 			{
 			midsection.GetComponent<CanvasGroup>().alpha = 1.0f;
-			doneYet = 1;
+			midConeDone = 1;
+			collectedParts++;
 			}
         } 		
     }

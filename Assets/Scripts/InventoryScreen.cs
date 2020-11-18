@@ -5,7 +5,7 @@ using UnityEngine;
 public class InventoryScreen : MonoBehaviour
 {
 	
-	public GameObject HUD;
+	public GameObject PartsScreenTab;
 	public GameObject PartsScreen;
 	public int toggleOn = 0;
     // Start is called before the first frame update
@@ -35,11 +35,13 @@ public class InventoryScreen : MonoBehaviour
 			
 			if (toggleOn == 1)
 			{
-				HUD.GetComponent<CanvasGroup>().alpha = 1.0f;
+				PartsScreen.GetComponent<CanvasGroup>().alpha = 1.0f;
+				PartsScreenTab.GetComponent<CanvasGroup>().alpha = 0.0f;
 			}
 			else
 			{
-				HUD.GetComponent<CanvasGroup>().alpha = 0.0f;
+				PartsScreen.GetComponent<CanvasGroup>().alpha = 0.0f;
+				PartsScreenTab.GetComponent<CanvasGroup>().alpha = 1.0f;
 			}
 		}		
 		

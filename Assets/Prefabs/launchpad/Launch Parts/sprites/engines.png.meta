@@ -6,12 +6,12 @@ TextureImporter:
   serializedVersion: 11
   mipmaps:
     mipMapMode: 1
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
-    fadeOut: 1
+    fadeOut: 0
     borderMipMap: 1
-    mipMapsPreserveCoverage: 1
+    mipMapsPreserveCoverage: 0
     alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 3
     mipMapFadeDistanceEnd: 5
