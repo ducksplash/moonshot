@@ -19,6 +19,7 @@ public class partscheck : MonoBehaviour
 	
 	public GameObject midsection;	
 	public GameObject midConePart;
+	
 	public int collectedParts = 0;
 	public int midConeDone = 0;		
 	public int enginesDone = 0;		
