@@ -9,6 +9,8 @@ TagManager:
   - missionGUI
   - Collectables
   - MissionText
+  - pressF
+  - buildText
   layers:
   - Default
   - TransparentFX
