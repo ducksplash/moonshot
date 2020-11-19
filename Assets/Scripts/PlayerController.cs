@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     public Transform playerCameraParent;
     public float lookSpeed = 2.0f;
     public float lookXLimit = 60.0f;
-    Animator WiMotion;
+    public Animator WiMotion;
     CharacterController characterController;
 	
 	// Player Stats
