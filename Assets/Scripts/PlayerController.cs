@@ -19,7 +19,11 @@ public class PlayerController : MonoBehaviour
     public Transform playerCameraParent;
     public float lookSpeed = 2.0f;
     public float lookXLimit = 60.0f;
+	public float startFOV = 43.0f;
+	public float sprintFOV = 38.0f;
+	public float t = 0.5f;
     public Animator WiMotion;
+    public Camera MainCamera;
     CharacterController characterController;
 	
 	// Player Stats
@@ -62,14 +66,25 @@ public class PlayerController : MonoBehaviour
 			{
 				curSpeedX = curSpeedX * sprintBoost;
 				curSpeedY = curSpeedY * sprintBoost;
+
+				
 			}
 			
 			else if (Input.GetButtonUp("Sprint"))
 			{
 				curSpeedX = curSpeedX / sprintBoost; 
 				curSpeedY = curSpeedY / sprintBoost; 
+
 			}			
 			
+			if (curSpeedX > 9.0f)
+			{
+				MainCamera.fieldOfView = Mathf.Lerp(MainCamera.fieldOfView, sprintFOV, t);				
+			}
+			else
+			{
+				MainCamera.fieldOfView = Mathf.Lerp(MainCamera.fieldOfView, startFOV, t);				
+			}
 
 			
             moveDirection = (forward * curSpeedX) + (right * curSpeedY);

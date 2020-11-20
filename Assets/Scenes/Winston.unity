@@ -560,7 +560,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 881525869}
+  m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 1
   m_ReceivesEvents: 1
@@ -864,7 +864,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 0.50719, z: 1}
   m_Children: []
   m_Father: {fileID: 185438710}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1148,6 +1148,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.75018, y: 0.69730115, z: 1}
   m_Children:
+  - {fileID: 1857420020}
   - {fileID: 1842282316}
   - {fileID: 171350307}
   - {fileID: 1556183448}
@@ -1156,7 +1157,6 @@ RectTransform:
   - {fileID: 864559216}
   - {fileID: 810460180}
   - {fileID: 954869698}
-  - {fileID: 1857420020}
   m_Father: {fileID: 780637388}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1920,7 +1920,7 @@ RectTransform:
   m_LocalScale: {x: 1.4412475, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 185438710}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6318,7 +6318,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 185438710}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6857,7 +6857,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 9d4c8fd1708f4a943b8cb261b5bef2ce,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.9100002
+      value: -1.79
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9d4c8fd1708f4a943b8cb261b5bef2ce,
         type: 3}
@@ -7068,7 +7068,7 @@ RectTransform:
   m_LocalScale: {x: 4.0512023, y: 2.8288, z: 1}
   m_Children: []
   m_Father: {fileID: 185438710}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7398,7 +7398,7 @@ Camera:
   m_FOVAxisMode: 0
   m_SensorSize: {x: 54.12, y: 25.59}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 32.96973
+  m_FocalLength: 32.482002
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -7407,7 +7407,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 42.4208
+  field of view: 42.999996
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -8224,7 +8224,7 @@ RectTransform:
   m_LocalScale: {x: 1.72, y: 1.4835389, z: 0.52444106}
   m_Children: []
   m_Father: {fileID: 185438710}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8425,7 +8425,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 185438710}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -13194,7 +13194,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1473953557}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 72.8, y: 2.08, z: 19.4}
+  m_LocalPosition: {x: 101.65, y: 2.08, z: -1.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1567161035}
@@ -13219,11 +13219,15 @@ MonoBehaviour:
   curSpeedY: 0
   jumpSpeed: 8.5
   gravity: 20
-  sprintBoost: 1.7
+  sprintBoost: 2.5
   playerCameraParent: {fileID: 1567161035}
   lookSpeed: 2.6
   lookXLimit: 60
+  startFOV: 43
+  sprintFOV: 32
+  t: 0.5
   WiMotion: {fileID: 0}
+  MainCamera: {fileID: 881525869}
   returnVehicleParts: 0
   canMove: 1
 --- !u!143 &1473953560
@@ -13237,13 +13241,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2.93
-  m_Radius: 1.3
+  m_Height: 1.05
+  m_Radius: 1.36
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.002
-  m_Center: {x: 0, y: -0.6, z: 0}
+  m_Center: {x: 0, y: -0.45, z: 0}
 --- !u!95 &1473953561
 Animator:
   serializedVersion: 3
@@ -14120,7 +14124,7 @@ RectTransform:
   m_LocalScale: {x: 2.32, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 185438710}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -15971,7 +15975,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 185438710}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -16170,7 +16174,7 @@ RectTransform:
   m_LocalScale: {x: 1.3330134, y: 1.7070099, z: 1}
   m_Children: []
   m_Father: {fileID: 185438710}
-  m_RootOrder: 8
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
@@ -16904,7 +16908,7 @@ MonoBehaviour:
   launchPadGUI: {fileID: 1530506289}
   MoonCannon: {fileID: 1225384854}
   Collectables: {fileID: 1960913961}
-  pressF: {fileID: 0}
+  pressF: {fileID: 744754500}
   Player: {fileID: 1473953557}
 --- !u!1001 &1940418416
 PrefabInstance:

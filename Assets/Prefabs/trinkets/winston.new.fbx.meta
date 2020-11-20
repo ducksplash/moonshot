@@ -33,6 +33,24 @@ ModelImporter:
   - first:
       74: -8146987422991063992
     second: WinstonStrafeRight
+  - first:
+      74: -5003131165045108139
+    second: metarig|PoseLib
+  - first:
+      74: 4691931641432461989
+    second: metarig|WinstonFly
+  - first:
+      74: 8129345841644439161
+    second: metarig|WinstonFly.001
+  - first:
+      74: -1023344609432517348
+    second: metarig|WinstonLoaf
+  - first:
+      74: 804938854730814691
+    second: metarig|WinstonStrafeLeft
+  - first:
+      74: 5563568360839993424
+    second: metarig|WinstonWalk
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -82,13 +100,13 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    keepQuads: 0
+    keepQuads: 1
     weldVertices: 1
     preserveHierarchy: 1
     skinWeightsMode: 1
     maxBonesPerVertex: 32
     minBoneWeight: 0.001
-    meshOptimizationFlags: -1
+    meshOptimizationFlags: 0
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
