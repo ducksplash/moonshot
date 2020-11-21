@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1eb64b95e859aa74fa24c6a3c2fc61af
+guid: 87e50168e05bafc469ba27735c01fcf6
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
@@ -7,8 +7,38 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Meshpart1Mtl.001
+    second: {fileID: 2100000, guid: 62a223c95a382e5408caaed5ec65fd73, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Part1Mtl.001
-    second: {fileID: 2100000, guid: 71cb434030948854a863ba7d7f436830, type: 2}
+    second: {fileID: 2100000, guid: a48f709c66b95cd408dcfe0d2da81130, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Part1Mtl.002
+    second: {fileID: 2100000, guid: 402c02e7027b5d04d80353b36e013a79, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Part2Mtl
+    second: {fileID: 2100000, guid: 3a017e9e9fd813a4a856893af3bf3c4b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Part2Mtl.001
+    second: {fileID: 2100000, guid: 232cbef35ecb34d439ad7ba4265ba184, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Part4Mtl
+    second: {fileID: 2100000, guid: 93c900281b4ff8e48b2c4daaf374b6d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Part4Mtl.001
+    second: {fileID: 2100000, guid: 3cbde6a6c773c1f40ad2358df8639516, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -41,7 +71,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1eb64b95e859aa74fa24c6a3c2fc61af
+guid: 43d9c60acbafcc44b96b0de414f48f29
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Part1Mtl.001
-    second: {fileID: 2100000, guid: 71cb434030948854a863ba7d7f436830, type: 2}
+      name: Meshpart1Mtl.004
+    second: {fileID: 2100000, guid: 87aa39d54f23f864489ae1ec3a86758a, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
