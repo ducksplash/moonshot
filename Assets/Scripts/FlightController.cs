@@ -2,37 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(CharacterController))]
+
+
+
 public class FlightController : MonoBehaviour
 {
-	
-	
-	
-	
-	// Parameters
     public float speed = 7.5f;
 	public float curSpeedX = 0f;
 	public float curSpeedY = 0f;
-    public float jumpSpeed = 8.0f;
-    public float gravity = 20.0f;
-	public float sprintBoost = 1.4f;
     public Transform playerCameraParent;
     public float lookSpeed = 2.0f;
     public float lookXLimit = 60.0f;
 	public float startFOV = 43.0f;
 	public float sprintFOV = 38.0f;
-	public float t = 0.5f;
     public Animator WiMotion;
     public Camera MainCamera;
     CharacterController characterController;
-     Vector3 direction = Vector3.zero;    // forward/back & left/right
-     float   verticalVelocity = 0;        // up/down
-
- 
+	
 	// Player Stats
-		
 	
-	
+	public int returnVehicleParts = 0;
     Vector3 moveDirection = Vector3.zero;
     Vector2 rotation = Vector2.zero;
 
@@ -45,50 +34,52 @@ public class FlightController : MonoBehaviour
         rotation.y = transform.eulerAngles.y;
     }
 
-      void Update () {
-         
 
- 
- 
-         if (Input.GetButton("Up")) {
-             
-             transform.Translate(MainCamera.transform.forward * speed * Input.GetAxis("Vertical"));
-         }
-     
-         if (Input.GetButtonUp("Down")) {
-             
-             transform.Translate(-MainCamera.transform.forward * speed * Input.GetAxis("Vertical"));
-         }
-             
- 
- 
-		  if (Input.GetButton("Right")) {
-				  transform.Translate(Vector3.right * speed * Input.GetAxis("Horizontal"));
-		  }
- 
- 
-		  if (Input.GetButton("Left")) {
-				  transform.Translate(Vector3.left * speed * Input.GetAxis("Horizontal"));
-		  }
- 
- 
- 
-         // This ensures that we don't move faster going diagonally
-         if(direction.magnitude > 1f) {
-             direction = direction.normalized;
-         }
- 
-     }
- 
-     
-     // FixedUpdate is called once per physics loop
-     // Do all MOVEMENT and other physics stuff here.
-     void FixedUpdate () {
-         
-         // "direction" is the desired movement direction, based on our player's input
-         Vector3 dist = direction * speed * Time.deltaTime;
- 
-         // Apply the movement to our character controller (which handles collisions for us)
-         characterController.Move(dist);
-     }
+    void Update()
+    {
+		
+
+            Vector3 forward = transform.TransformDirection(Vector3.forward);
+            Vector3 right = transform.TransformDirection(Vector3.right);
+            Vector3 up = transform.TransformDirection(Vector3.up);
+            Vector3 down = transform.TransformDirection(Vector3.down);
+			
+            curSpeedX = speed * Input.GetAxis("Vertical");
+            curSpeedY = speed * Input.GetAxis("Horizontal");
+						
+            moveDirection = (forward * curSpeedX) + (right * curSpeedY);
+		
+			moveDirection.y -= Time.deltaTime;
+		
+			characterController.Move(moveDirection * Time.deltaTime);
+
+
+            rotation.y += Input.GetAxis("Mouse X") * lookSpeed;
+            rotation.x += -Input.GetAxis("Mouse Y") * lookSpeed;
+            rotation.x = Mathf.Clamp(rotation.x, -lookXLimit, lookXLimit);
+            playerCameraParent.localRotation = Quaternion.Euler(rotation.x, 0, 0);
+            transform.eulerAngles = new Vector2(0, rotation.y);		
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

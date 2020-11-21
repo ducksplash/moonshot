@@ -11,6 +11,8 @@ TagManager:
   - MissionText
   - pressF
   - buildText
+  - FlyingPlayer
+  - FlyMainCamera
   layers:
   - Default
   - TransparentFX
