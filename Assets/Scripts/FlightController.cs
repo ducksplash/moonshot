@@ -13,8 +13,7 @@ public class FlightController : MonoBehaviour
     public Transform playerCameraParent;
     public float lookSpeed = 2.0f;
     public float lookXLimit = 60.0f;
-	public float startFOV = 43.0f;
-	public float sprintFOV = 38.0f;
+	public int ringThingsCollected;
     public Animator WiMotion;
     public Camera MainCamera;
     CharacterController characterController;

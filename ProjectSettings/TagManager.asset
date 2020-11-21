@@ -13,6 +13,7 @@ TagManager:
   - buildText
   - FlyingPlayer
   - FlyMainCamera
+  - RingThingEH
   layers:
   - Default
   - TransparentFX

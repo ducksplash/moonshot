@@ -6,18 +6,26 @@ using UnityEngine;
 public class RingThing : MonoBehaviour
 {
 	
-	public GameObject player;
-	public int ringThings;
+	public GameObject thePlayer;
+	public int ringThingsCollected;
 	
 	
-	void Start()
-    {
-        
-		ringThings = 10;
-		
-		
-    }
+	FlightController playerStatus = null;
+ 
 	
-	
-	
+	void Awake()
+	{
+	playerStatus = GameObject.Find("FlyingPlayer").GetComponent<FlightController>();
+	}
+ 
+ 
+ 
+	void OnTriggerEnter(Collider other) 
+	 {
+		if (other.tag == "FlyingPlayer")
+		{
+			playerStatus.ringThingsCollected++;
+			Destroy(transform.parent.gameObject);
+		}
+	}
 }
