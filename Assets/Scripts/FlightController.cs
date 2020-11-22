@@ -28,7 +28,6 @@ public class FlightController : MonoBehaviour
     void Start()
     {
         characterController = GetComponent<CharacterController>();
-        //Get Animator component
         WiMotion = GetComponent<Animator>();
         rotation.y = transform.eulerAngles.y;
     }
@@ -58,7 +57,17 @@ public class FlightController : MonoBehaviour
             rotation.x = Mathf.Clamp(rotation.x, -lookXLimit, lookXLimit);
             playerCameraParent.localRotation = Quaternion.Euler(rotation.x, 0, 0);
             transform.eulerAngles = new Vector2(0, rotation.y);		
-    }
+			
+			if (Input.GetKey(KeyCode.Q) || Input.GetButton("Sprint")){
+			characterController.Move(Vector3.up * Time.deltaTime * speed);
+			}
+
+			if (Input.GetKey(KeyCode.E) || Input.GetButton("Jump")){
+			characterController.Move(Vector3.down * Time.deltaTime * speed);
+			}
+
+
+			}
 
 }
 
