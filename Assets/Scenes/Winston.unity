@@ -19332,6 +19332,26 @@ PrefabInstance:
       propertyPath: m_NormalizedViewPortRect.height
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5895193172102478768, guid: e561d90f7985d7245b7c1644c07f2a14,
+        type: 3}
+      propertyPath: field of view
+      value: 115.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5895193172102478768, guid: e561d90f7985d7245b7c1644c07f2a14,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5895193172102478768, guid: e561d90f7985d7245b7c1644c07f2a14,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5895193172102478768, guid: e561d90f7985d7245b7c1644c07f2a14,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5895193172102478769, guid: e561d90f7985d7245b7c1644c07f2a14,
         type: 3}
       propertyPath: m_LocalPosition.x

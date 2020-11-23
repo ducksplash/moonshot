@@ -16,19 +16,41 @@ public GameObject cannonSeat;
 public GameObject MoonCannon;
 public GameObject Collectables;
 private int speed = 50;
+private float timeToGo = 300.0f;
 public GameObject pressF;
 public GameObject xToLaunch;
 public GameObject TargetRock;
 public GameObject fToGetIn;
 public GameObject Player;
+private Camera FoV;
 private string NewText;
+private bool doOnceDude = false;
 private int partsFound;
 private float detectionRange;
 private bool readyForLaunch = false;
 private bool launchingNow = false;
 
 
+			IEnumerator Launch() 
+			{		
+				while (FoV.fieldOfView > 0.5f)
+				{
+				FoV.fieldOfView--;
 
+				
+				yield return new WaitForSeconds(0.01f);				
+				}
+				
+				
+				if (FoV.fieldOfView < 1.0f && doOnceDude == false)
+				{
+				UnityEngine.SceneManagement.SceneManager.LoadScene("HomeBound");	
+				yield return null;				
+				}
+
+
+			}
+			
 
     void Start() 
     {
@@ -44,6 +66,7 @@ private bool launchingNow = false;
         xToLaunch = GameObject.FindWithTag("XtoLaunch");
         fToGetIn = GameObject.FindWithTag("fToGetIn");
         TargetRock = GameObject.FindWithTag("TargetRock");
+		FoV = launchPadGUI.GetComponentInChildren<Camera>();
 
 		
     }
@@ -103,15 +126,13 @@ private bool launchingNow = false;
 			
 
 				
-			if (detectionRange < 30 && MoonCannon.activeSelf && launchingNow)
+			if (detectionRange < 30 && MoonCannon.activeSelf && launchingNow && Input.GetKeyDown("x"))
 			{	
-				if (Input.GetKeyDown("x"))
-				{
-				
 
-					
-				//UnityEngine.SceneManagement.SceneManager.LoadScene("HomeBound");				
-				}
+
+				StartCoroutine("Launch");
+
+							
 			}
 		}
 
