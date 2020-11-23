@@ -52,7 +52,7 @@ public class Missions : MonoBehaviour
 					MissionText.text = NewText;			
 
 				}
-			
+							
 			}
 	}	
 }
