@@ -65,8 +65,8 @@ private bool launchingNow = false;
         xToLaunch = GameObject.FindWithTag("XtoLaunch");
         fToGetIn = GameObject.FindWithTag("fToGetIn");
         TargetRock = GameObject.FindWithTag("TargetRock");
-		FoV = launchPadGUI.GetComponentInChildren<Camera>();
-		cannoncam = launchPadGUI.GetComponentInChildren<Camera>();
+		FoV = launchpadPlate.GetComponentInChildren<Camera>();
+		cannoncam = launchpadPlate.GetComponentInChildren<Camera>();
 
 		
     }
@@ -129,10 +129,8 @@ private bool launchingNow = false;
 			if (detectionRange < 30 && MoonCannon.activeSelf && launchingNow && Input.GetKeyDown("x"))
 			{	
 
-
 				StartCoroutine("Launch");
 
-							
 			}
 		}
 
