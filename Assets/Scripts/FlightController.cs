@@ -58,11 +58,13 @@ public class FlightController : MonoBehaviour
             playerCameraParent.localRotation = Quaternion.Euler(rotation.x, 0, 0);
             transform.eulerAngles = new Vector2(0, rotation.y);		
 			
-			if (Input.GetKey(KeyCode.Q) || Input.GetButton("Sprint")){
+			if (Input.GetKey(KeyCode.Q) || Input.GetButton("Sprint") || Input.GetButton("CTRL"))
+			{
 			characterController.Move(Vector3.up * Time.deltaTime * speed);
 			}
 
-			if (Input.GetKey(KeyCode.E) || Input.GetButton("Jump")){
+			if (Input.GetKey(KeyCode.E) || Input.GetButton("Jump"))
+			{
 			characterController.Move(Vector3.down * Time.deltaTime * speed);
 			}
 

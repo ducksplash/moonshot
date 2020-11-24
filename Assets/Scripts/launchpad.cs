@@ -11,7 +11,7 @@ public class launchpad : MonoBehaviour
 public GameObject launchpadPlate;
 public GameObject launchPadGUI;
 public GameObject RegularCamera;
-public GameObject cannoncam;
+public Camera cannoncam;
 public GameObject cannonSeat;
 public GameObject MoonCannon;
 public GameObject Collectables;
@@ -60,13 +60,13 @@ private bool launchingNow = false;
         launchPadGUI = GameObject.FindWithTag("launchPadGUI");
         Collectables = GameObject.FindWithTag("Collectables");
         cannonSeat = GameObject.FindWithTag("cannonseat");
-        cannoncam = GameObject.FindWithTag("cannoncamera");
         RegularCamera = GameObject.FindWithTag("MainCamera");
         pressF = GameObject.FindWithTag("pressF");
         xToLaunch = GameObject.FindWithTag("XtoLaunch");
         fToGetIn = GameObject.FindWithTag("fToGetIn");
         TargetRock = GameObject.FindWithTag("TargetRock");
 		FoV = launchPadGUI.GetComponentInChildren<Camera>();
+		cannoncam = launchPadGUI.GetComponentInChildren<Camera>();
 
 		
     }
@@ -112,7 +112,7 @@ private bool launchingNow = false;
 				{
 				
 				Player.transform.position = cannonSeat.transform.position;
-				cannoncam.SetActive(true);				
+				cannoncam.enabled = true;	
 				RegularCamera.SetActive(false);
 				
 				fToGetIn.GetComponent<CanvasGroup>().alpha = 0.0f;	
