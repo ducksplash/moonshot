@@ -15,6 +15,7 @@ public class homewardBound : MonoBehaviour
 	public GameObject dashd7;
 	public GameObject dashd8;
 	public GameObject dashd9;
+	public GameObject megaRingEvent;
 	public int ringThingsCollected;
 	public GameObject thePlayer;
  
@@ -66,6 +67,8 @@ public class homewardBound : MonoBehaviour
 			if (playerStatus.ringThingsCollected == 9)
 			{
 				dashd9.SetActive(true);
+				megaRingEvent.GetComponent<Renderer>().enabled = true;
+				megaRingEvent.GetComponent<Collider>().enabled = true;
 			}
 	 }
 }
