@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI; 
+
 
 public class escape : MonoBehaviour
 {
 	
     public GameObject ESCMenu;
     public GameObject Player;
+    public GameObject ReturnVehicleParts;
+    public GameObject Collectables;
+	public Text partsText;	
 	private float startPosX;
 	private float startPosY;
 	private float startPosZ;
@@ -58,6 +63,7 @@ public class escape : MonoBehaviour
 			ESCMenu.GetComponent<CanvasGroup>().alpha = 1.0f;
 			Time.timeScale = 0f;
 			escMenuOpen = true;
+			partsText.text = Collectables.GetComponent<partscheck>().collectedParts + " of 5\ncollected";
 			}
 			else
 			{
