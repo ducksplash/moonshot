@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 
 
@@ -13,16 +13,21 @@ public class FlightController : MonoBehaviour
     public Transform playerCameraParent;
     public float lookSpeed = 2.0f;
     public float lookXLimit = 60.0f;
+	public int playerHealth;
+	public int playerMaxHealth;
 	public int ringThingsCollected;
     public Animator WiMotion;
     public Camera MainCamera;
     CharacterController characterController;
-	
-	// Player Stats
-	
-	public int returnVehicleParts = 0;
     Vector3 moveDirection = Vector3.zero;
     Vector2 rotation = Vector2.zero;
+
+
+	void Awake()
+	{
+		playerHealth = 100;
+		playerMaxHealth = 100;
+	}
 
 
     void Start()
@@ -30,12 +35,14 @@ public class FlightController : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         WiMotion = GetComponent<Animator>();
         rotation.y = transform.eulerAngles.y;
+
     }
 
 
     void Update()
     {
 		
+
 
             Vector3 forward = transform.TransformDirection(Vector3.forward);
             Vector3 right = transform.TransformDirection(Vector3.right);
@@ -67,6 +74,8 @@ public class FlightController : MonoBehaviour
 			{
 			characterController.Move(Vector3.down * Time.deltaTime * speed);
 			}
+
+			
 
 
 			}
