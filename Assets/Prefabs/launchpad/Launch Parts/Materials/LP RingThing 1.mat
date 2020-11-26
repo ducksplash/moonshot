@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: LP Standard
+  m_Name: LP RingThing 1
   m_Shader: {fileID: 4800000, guid: cd67ccfb3a882fd488d3accbfbcc54af, type: 3}
   m_ShaderKeywords: _NORMALMAP
   m_LightmapFlags: 4
