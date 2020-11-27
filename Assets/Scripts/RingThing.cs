@@ -8,7 +8,7 @@ public class RingThing : MonoBehaviour
 	
 	public GameObject thePlayer;
 	public int ringThingsCollected;
-	
+		
 	
 	FlightController playerStatus = null;
  

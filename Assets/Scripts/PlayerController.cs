@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
 	public float sprintBoost = 1.4f;
     public Transform playerCameraParent;
     public float lookSpeed = 2.0f;
+	public int playerHealth;
+	public int playerMaxHealth;
     public float lookXLimit = 60.0f;
 	public float startFOV = 43.0f;
 	public float sprintFOV = 38.0f;
@@ -30,13 +32,46 @@ public class PlayerController : MonoBehaviour
 	
 	public int returnVehicleParts = 0;
 	
-	
+		void Awake()
+	{
+		playerHealth = 100;
+		playerMaxHealth = 100;
+	}
 	
     Vector3 moveDirection = Vector3.zero;
     Vector2 rotation = Vector2.zero;
 
     [HideInInspector]
     public bool canMove = true;
+
+
+
+
+			IEnumerator Death() 
+			{		
+			
+			
+				WiMotion.SetTrigger("Dead");
+				canMove = false;
+				characterController.enabled = false;
+				
+				int aTimer = 400;
+				while (aTimer > 0)
+				{
+				aTimer--;
+
+				
+				yield return new WaitForSeconds(0.01f);				
+				}
+			UnityEngine.SceneManagement.SceneManager.LoadScene("DEAD1");
+
+
+			}
+
+
+
+
+
 
     void Start()
     {
@@ -48,11 +83,17 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+		
+		if (playerHealth <= 0)
+		{
+			StartCoroutine("Death");
+
+		}
+		
+		
+		
         if (characterController.isGrounded)
         {
-			
-			
-
 			
 			
             // We are grounded, so recalculate move direction based on axes

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
      
-    public class Shoot : MonoBehaviour {
+    public class otherShoot : MonoBehaviour {
      
         public Transform player;
         public float range = 50.0f;

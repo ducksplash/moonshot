@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class hit : MonoBehaviour
+public class PlayerHit : MonoBehaviour
 {
 	
 	private int curHealth;
@@ -11,8 +11,8 @@ public class hit : MonoBehaviour
 	
 	void Awake()
 	{
-	Player = GameObject.FindWithTag("FlyingPlayer");
-	curHealth = Player.GetComponent<FlightController>().playerHealth;
+	Player = GameObject.FindWithTag("Player");
+	curHealth = Player.GetComponent<PlayerController>().playerHealth;
 	}
 	
     // Start is called before the first frame update
@@ -25,21 +25,21 @@ public class hit : MonoBehaviour
 	
 	void OnCollisionEnter(Collision other)
     {
-		
-	if(other.gameObject.tag == "FlyingPlayer")
+	
+	if(other.gameObject.tag == "Player")
 	{
 		if (curHealth >= dmg)
 		{
-		Player.GetComponent<FlightController>().playerHealth -= dmg;
+		Player.GetComponent<PlayerController>().playerHealth -= dmg;
 		}
 		else
 		{
-		Player.GetComponent<FlightController>().playerHealth = 0;			
+		Player.GetComponent<PlayerController>().playerHealth = 0;			
 		}
 				
 	
 	}
-	
 		Destroy(this.gameObject);		
+	
 	}
 }
