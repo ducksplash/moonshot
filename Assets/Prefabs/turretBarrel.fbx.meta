@@ -1,59 +1,9 @@
 fileFormatVersion: 2
-guid: e315225dbda625245895b51709d549c7
+guid: 98962bea0a76fe74188f769face2587b
 ModelImporter:
   serializedVersion: 19301
-  internalIDToNameTable:
-  - first:
-      74: -7536546058115350168
-    second: metarig|metarigAction.002
-  - first:
-      74: -5003131165045108139
-    second: metarig|PoseLib
-  - first:
-      74: 4691931641432461989
-    second: WinstonFly
-  - first:
-      74: -4976401178701435256
-    second: WinstonFlyLeft
-  - first:
-      74: -2974184344189683651
-    second: WinstonFlyRight
-  - first:
-      74: -5694201109595162278
-    second: metarig|WinstonFlyRight.001
-  - first:
-      74: -1023344609432517348
-    second: metarig|WinstonLoaf
-  - first:
-      74: 804938854730814691
-    second: metarig|WinstonStrafeLeft
-  - first:
-      74: 4214549102033051326
-    second: metarig|WinstonStrafeRight
-  - first:
-      74: 5563568360839993424
-    second: metarig|WinstonWalk
-  - first:
-      74: 4482563457606589684
-    second: rig|WinstonLoaf
-  - first:
-      74: 8524704711037568912
-    second: metarig|dead
-  - first:
-      74: 4691931641432461989
-    second: metarig|WinstonFly
-  - first:
-      74: 8129345841644439161
-    second: metarig|WinstonFly.001
-  - first:
-      74: 6325663566704247114
-    second: rig|WinstonFly.001
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: No Name
-    second: {fileID: 2100000, guid: a078461e8a0d729bda92ce8ef56fd968, type: 2}
+  internalIDToNameTable: []
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -119,7 +69,7 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips: []
-  importAnimation: 0
+  importAnimation: 1
   humanDescription:
     serializedVersion: 3
     human: []
