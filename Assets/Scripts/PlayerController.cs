@@ -80,6 +80,8 @@ public class PlayerController : MonoBehaviour
 		
 		if (playerHealth <= 0)
 		{
+			characterController.enabled = false;
+			WiMotion.SetTrigger("Dead");
 			StartCoroutine("Death");
 
 		}

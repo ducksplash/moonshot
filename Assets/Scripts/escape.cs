@@ -13,11 +13,29 @@ public class escape : MonoBehaviour
     public GameObject ReturnVehicleParts;
     public GameObject Collectables;
 	public Text partsText;	
+	public GameObject Fader;
 	private float startPosX;
 	private float startPosY;
 	private float startPosZ;
 	
 	public bool escMenuOpen = false;
+	
+			IEnumerator Quitting() 
+			{		
+			Time.timeScale = 1;
+			int aTimer = 150;
+				while (aTimer > 0)
+				{
+
+				Fader.GetComponent<CanvasGroup>().alpha += 0.01f;
+				aTimer--;
+							
+				yield return new WaitForSeconds(0.02f);						
+				}							
+			UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");			
+			}
+	
+	
 	
     // Start is called before the first frame update
     void Start()
@@ -34,7 +52,7 @@ public class escape : MonoBehaviour
     public void QuitButton()
     {
         // Quit Game
-        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
+	StartCoroutine("Quitting");
     }	
 	
     public void StuckButton()

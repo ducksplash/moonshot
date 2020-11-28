@@ -10,6 +10,7 @@ public class launchpad : MonoBehaviour
 //public Text buildText;
 public GameObject launchpadPlate;
 public GameObject launchPadGUI;
+public GameObject Fader;
 public GameObject RegularCamera;
 public Camera cannoncam;
 public GameObject cannonSeat;
@@ -31,6 +32,30 @@ private bool readyForLaunch = false;
 private bool launchingNow = false;
 
 
+
+			IEnumerator MovingOn() 
+			{		
+			Time.timeScale = 1;
+			int aTimer = 150;
+				while (aTimer > 0)
+				{
+
+				Fader.GetComponent<CanvasGroup>().alpha += 0.01f;
+				aTimer--;
+							
+				yield return new WaitForSeconds(0.02f);						
+				}							
+			UnityEngine.SceneManagement.SceneManager.LoadScene("HomeBound");
+			}
+
+
+
+
+
+
+
+
+
 			IEnumerator Launch() 
 			{		
 				while (FoV.fieldOfView > 0.5f)
@@ -44,7 +69,7 @@ private bool launchingNow = false;
 				
 				if (FoV.fieldOfView < 1.0f && doOnceDude == false)
 				{
-				UnityEngine.SceneManagement.SceneManager.LoadScene("HomeBound");	
+				StartCoroutine("MovingOn");
 				yield return null;				
 				}
 

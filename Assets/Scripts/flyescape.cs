@@ -11,22 +11,48 @@ public class flyescape : MonoBehaviour
 	private float startPosX;
 	private float startPosY;
 	private float startPosZ;
-	
+	public GameObject Fader;
 	public bool escMenuOpen = false;
 	
     // Start is called before the first frame update
-    void Start()
+	
+	
+			IEnumerator Quitting() 
+			{		
+			Time.timeScale = 1;
+			int aTimer = 150;
+				while (aTimer > 0)
+				{
+
+				Fader.GetComponent<CanvasGroup>().alpha += 0.01f;
+				aTimer--;
+							
+				yield return new WaitForSeconds(0.02f);						
+				}							
+			UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");			
+			}
+	
+	
+	
+	
+	
+	
+	void Start()
     {
 		startPosX = 0f;
 		startPosY = 0f;
 		startPosZ = 0f;
     }
 	
+
+	
+	
+	
 	
     public void QuitButtonFly()
     {
-        // Quit Game
-        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
+			StartCoroutine("Quitting");
+
     }	
 	
     public void StuckButtonFly()

@@ -12016,6 +12016,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ESCMenu: {fileID: 1221954172}
   Player: {fileID: 4422632681801804237}
+  Fader: {fileID: 1027140276}
   escMenuOpen: 0
 --- !u!225 &1221954175
 CanvasGroup:

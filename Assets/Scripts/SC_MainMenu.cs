@@ -9,6 +9,30 @@ public class SC_MainMenu : MonoBehaviour
     public GameObject WhatdoMenu;
     public GameObject NewGame;
     public GameObject RookieMenu;
+	public GameObject Fader;
+
+
+
+
+			IEnumerator Starting() 
+			{		
+			Time.timeScale = 1;
+			int aTimer = 150;
+				while (aTimer > 0)
+				{
+
+				Fader.GetComponent<CanvasGroup>().alpha += 0.01f;
+				aTimer--;
+							
+				yield return new WaitForSeconds(0.02f);						
+				}							
+			UnityEngine.SceneManagement.SceneManager.LoadScene("Winston");		
+			}
+
+
+
+
+
 
     // Start is called before the first frame update
     public void Start()
@@ -19,7 +43,7 @@ public class SC_MainMenu : MonoBehaviour
     public void PlayNowButton()
     {
         // Play Now Button has been pressed, here you can initialize your game (For example Load a Scene called GameLevel etc.)
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Winston");
+			StartCoroutine("Starting");
     }
 
     public void CreditsButton()
