@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
 	// Parameters
     public float speed = 7.5f;
 	public float curSpeedX = 0f;
+	public GameObject Fader;
 	public float curSpeedY = 0f;
     public float jumpSpeed = 8.0f;
     public float gravity = 20.0f;
@@ -42,30 +43,23 @@ public class PlayerController : MonoBehaviour
     Vector2 rotation = Vector2.zero;
 
     [HideInInspector]
+	
     public bool canMove = true;
-
-
 
 
 			IEnumerator Death() 
 			{		
 			
-			
-				WiMotion.SetTrigger("Dead");
-				canMove = false;
-				characterController.enabled = false;
-				
-				int aTimer = 400;
+			int aTimer = 150;
 				while (aTimer > 0)
 				{
+
+				Fader.GetComponent<CanvasGroup>().alpha += 0.001f;
 				aTimer--;
-
-				
-				yield return new WaitForSeconds(0.01f);				
-				}
-			UnityEngine.SceneManagement.SceneManager.LoadScene("DEAD1");
-
-
+							
+				yield return new WaitForSeconds(0.02f);						
+				}							
+			UnityEngine.SceneManagement.SceneManager.LoadScene("DEAD1");				
 			}
 
 

@@ -21,10 +21,4 @@ public class EndMenu : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
     }	
 	
-	
-    public void MeetWinston()
-    {
-        // Quit Game
-        UnityEngine.SceneManagement.SceneManager.LoadScene("WinstonEnd");
-    }
 }

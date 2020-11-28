@@ -34,7 +34,7 @@ public class escape : MonoBehaviour
     public void QuitButton()
     {
         // Quit Game
-        Application.Quit();
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
     }	
 	
     public void StuckButton()

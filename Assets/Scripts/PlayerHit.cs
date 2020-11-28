@@ -39,7 +39,7 @@ public class PlayerHit : MonoBehaviour
 				
 	
 	}
-		Destroy(this.gameObject);		
+	Destroy(this.gameObject);		
 	
 	}
 }

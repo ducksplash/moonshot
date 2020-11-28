@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class FlightController : MonoBehaviour
 {
     public float speed = 100.0f;
+	public GameObject Fader;
 	public float curSpeedX = 0f;
 	public float curSpeedY = 0f;
     public Transform playerCameraParent;
@@ -24,24 +25,19 @@ public class FlightController : MonoBehaviour
 
 
 
-
 			IEnumerator Death() 
 			{		
 			
-			
-				WiMotion.SetTrigger("Dead");
-				characterController.enabled = false;
-				int aTimer = 400;
+			int aTimer = 150;
 				while (aTimer > 0)
 				{
+
+				Fader.GetComponent<CanvasGroup>().alpha += 0.001f;
 				aTimer--;
-
-				
-				yield return new WaitForSeconds(0.5f);				
-				}
-			UnityEngine.SceneManagement.SceneManager.LoadScene("DEAD2");
-
-
+							
+				yield return new WaitForSeconds(0.02f);						
+				}							
+			UnityEngine.SceneManagement.SceneManager.LoadScene("DEAD2");				
 			}
 
 
@@ -58,7 +54,6 @@ public class FlightController : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         WiMotion = GetComponent<Animator>();
         rotation.y = transform.eulerAngles.y;
-
     }
 
 
@@ -66,8 +61,10 @@ public class FlightController : MonoBehaviour
     {
 		if (playerHealth <= 0)
 		{
+			
+			characterController.enabled = false;
+			WiMotion.SetTrigger("Dead");
 			StartCoroutine("Death");
-
 		}
 
 

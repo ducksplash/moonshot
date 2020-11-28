@@ -6,16 +6,16 @@ using UnityEngine;
     public class Shoot : MonoBehaviour {
      
         public Transform player;
-        public float range = 50.0f;
-        public float bulletImpulse= 20.0f;
+        public float range;
+        public float bulletImpulse;
      
         private bool onRange= false;
      
         public Rigidbody projectile;
      
         void Start(){
-            float rand = Random.Range (0.2f, 1.1f);
-            InvokeRepeating("Shooting", 0.1f, rand);
+            float rand = Random.Range (0.1f, 1.1f);
+            InvokeRepeating("Shooting", 0.2f, rand);
         }
      
         void Shooting(){
@@ -26,7 +26,7 @@ using UnityEngine;
 				bullet.GetComponent<Rigidbody>().useGravity = false;
                 bullet.AddForce(transform.forward*bulletImpulse, ForceMode.VelocityChange);
              
-                Destroy(bullet.gameObject, 15);
+                Destroy(bullet.gameObject, 10);
             }
      
      

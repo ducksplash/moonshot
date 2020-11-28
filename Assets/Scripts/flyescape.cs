@@ -26,7 +26,7 @@ public class flyescape : MonoBehaviour
     public void QuitButtonFly()
     {
         // Quit Game
-        Application.Quit();
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
     }	
 	
     public void StuckButtonFly()
