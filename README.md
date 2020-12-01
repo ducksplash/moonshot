@@ -21,3 +21,24 @@ Join me as I attempt to go from zero Unity experience to a playable game in 28 d
 Will I make it or will I spend most of the time trying to animate a cat's legs?
 
 I guess we'll find out!
+
+UPDATE:
+
+FINISHED!!
+
+Huge big thanks to the following people; they don't know it but they helped me out a bundle with some props and music:
+
+US Flag: MKaran
+
+Camera: Daniel P. Rossi
+
+Music: ChipStep & Underglow
+by Shane Ivers
+https://www.silvermansound.com
+
+Font by: Michaël Van Wilder.
+
+Shaders: illexxandra (Force Field, Ocean, Plasma)
+Linguini21 (Glow)
+
+Everything else... That was all me soz.
