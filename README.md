@@ -56,5 +56,5 @@ Video: https://youtu.be/sBwCQm8EbH0
 
 Pics:
 
-<img src="https://github.com/ducksplash/moonshot/blob/master/screenshots/1.jpg" width="400" height="326"><img src="https://github.com/ducksplash/moonshot/blob/master/screenshots/2.jpg" width="400" height="326"><img src="https://github.com/ducksplash/moonshot/blob/master/screenshots/3.jpg" width="400" height="326"><img src="https://github.com/ducksplash/moonshot/blob/master/screenshots/4.jpg" width="400" height="326"><img src="https://github.com/ducksplash/moonshot/blob/master/screenshots/5.jpg" width="400" height="326">
+<img src="https://github.com/ducksplash/moonshot/blob/master/screenshots/1.jpg" width="400" height="300"><img src="https://github.com/ducksplash/moonshot/blob/master/screenshots/2.jpg" width="400" height="300"><img src="https://github.com/ducksplash/moonshot/blob/master/screenshots/3.jpg" width="400" height="300"><img src="https://github.com/ducksplash/moonshot/blob/master/screenshots/4.jpg" width="400" height="300"><img src="https://github.com/ducksplash/moonshot/blob/master/screenshots/5.jpg" width="400" height="300">
 
